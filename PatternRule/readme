@@ -1,0 +1,34 @@
+Auto build N file .c
+Hiểu pattern rule (%.o: %.c)
+Viết Makefile scale được project lớn
+
+Makefile cũ:
+
+main.o: main.c
+math.o: math.c
+
+Không scale
+Thêm file mới = sửa Makefile
+
+Viết Makefile mà:
+
+Thêm file .c → KHÔNG cần sửa gì
+Build auto
+
+| Symbol | Meaning              |
+| ------ | -------------------- |
+| `$@`   | target (file output) |
+| `$<`   | dependency đầu tiên  |
+
+Header dependency problem
+%.o: %.c
+
+ Nếu sửa .h → KHÔNG rebuild
+
+ | Variable | Nghĩa                |
+| -------- | -------------------- |
+| `$@`     | target               |
+| `$<`     | dependency đầu tiên  |
+| `$^`     | tất cả dependencies  |
+| `$?`     | dependencies mới hơn |
+
