@@ -1,0 +1,25 @@
+Static library là một file chứa nhiều object file .o được gom lại
+
+Khi link app, linker sẽ lấy code cần thiết từ libmath.a và nhúng vào executable.
+
+.o Là object file của một source file
+.a Là archive chứa nhiều .o
+
+1. Manual
+Bước 1: compile từng file lib
+gcc -Iinc -c lib/math/add.c -o add.o
+gcc -Iinc -c lib/math/sub.c -o sub.o
+
+
+Bước 2: gom thành static library
+ar rcs libmath.a add.o sub.o
+* Ý nghĩa thường dùng:
+
+r: replace hoặc thêm file vào archive
+c: create nếu chưa tồn tại
+s: tạo index symbol để linker tìm nhanh
+
+Bước 3: compile main
+gcc -Iinc -c src/main.c -o main.o
+Bước 4: link app với library
+gcc main.o libmath.a -o app

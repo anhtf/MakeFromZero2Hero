@@ -1,0 +1,211 @@
+# Embedded C & Linux Programming Build System Roadmap
+
+## Makefile & CMake — From Zero to Hero
+
+This repository documents my 30-day learning roadmap for mastering Makefile and CMake for:
+
+* Embedded C development
+* Linux programming
+* Firmware projects
+* Linux driver development
+* Cross-compilation and ARM toolchains
+
+The goal is to build strong foundations in build systems before moving into embedded firmware, Linux kernel modules, STM32 projects, and modern CMake workflows.
+
+---
+
+# Learning Roadmap
+
+## Week 1 — Makefile Fundamentals
+
+### Day 1
+
+* Understand the full build process:
+
+  * `.c -> .o -> executable`
+* Learn preprocessing, compiling, assembling, and linking
+* Use `nm`, `objdump`, and GCC build commands
+
+### Day 2
+
+* Write the first Makefile
+* Learn targets, dependencies, and `clean`
+* Understand how Make decides what to rebuild
+
+### Day 3
+
+* Learn Makefile variables and pattern rules
+* Use `$@`, `$<`, `$^`
+* Automatically build multiple source files
+
+### Day 4
+
+* Organize a project using:
+
+  * `src/`
+  * `inc/`
+  * `build/`
+* Build using a professional project structure
+
+### Day 5
+
+* Build projects with multiple directories:
+
+  * `src/`
+  * `drivers/`
+  * `lib/`
+* Learn scalable Makefile design
+
+### Day 6
+
+* Create and use static libraries (`.a`)
+* Separate reusable modules from the application
+
+---
+
+## Week 2 — Advanced Makefile
+
+### Day 7
+
+* Mini project review
+* Combine app, drivers, and libraries into one project
+
+### Day 8
+
+* Automatic dependency generation (`.d` files)
+* Rebuild correctly when headers change
+
+### Day 9
+
+* Shared libraries (`.so`)
+* Learn the difference between static and dynamic linking
+
+### Day 10
+
+* Debug and Release build modes
+* Conditional compilation in Makefile
+
+### Day 11
+
+* Multi-target Makefile
+* Separate build for app, library, and tests
+
+### Day 12
+
+* Introduction to cross-compilation
+* Use `arm-none-eabi-gcc`
+
+### Day 13
+
+* Build embedded firmware:
+
+  * `.elf`
+  * `.bin`
+  * `.hex`
+
+### Day 14
+
+* Embedded mini project using Makefile
+
+---
+
+## Week 3 — CMake Fundamentals
+
+### Day 15
+
+* Introduction to CMake
+* Write the first `CMakeLists.txt`
+
+### Day 16
+
+* Out-of-source build
+* Use `build/` folder with CMake
+
+### Day 17
+
+* Build multiple source files in CMake
+
+### Day 18
+
+* Include directories and compile options
+
+### Day 19
+
+* Create and link libraries in CMake
+
+### Day 20
+
+* Modern CMake:
+
+  * `target_include_directories`
+  * `target_link_libraries`
+
+### Day 21
+
+* Build a larger project with multiple modules
+
+---
+
+## Week 4 — Advanced CMake + Embedded
+
+### Day 22
+
+* Debug vs Release in CMake
+
+### Day 23
+
+* Toolchain files and cross-compilation
+
+### Day 24
+
+* Post-build commands
+* Generate `.bin` and `.hex`
+
+### Day 25
+
+* Embedded firmware project with CMake
+
+### Day 26
+
+* Debugging tools:
+
+  * `gdb`
+  * `objdump`
+  * `size`
+  * `nm`
+
+### Day 27
+
+* Faster build systems:
+
+  * Ninja
+  * Parallel build
+
+### Day 28
+
+* Hybrid project:
+
+  * application + library + driver
+
+### Day 29
+
+* CI/CD with GitHub Actions
+* Auto build and test
+
+### Day 30
+
+* Final project
+* Build a complete embedded or Linux project using Makefile/CMake
+
+---
+
+# Final Goal
+
+After finishing this roadmap, I should be able to:
+
+* Design professional Makefiles
+* Build large embedded/Linux projects
+* Use CMake for modern projects
+* Cross-compile for ARM targets
+* Build firmware and Linux applications efficiently
+* Prepare for Linux kernel driver and embedded firmware development
